@@ -1,16 +1,134 @@
-#box {
-  width: 12rem;
-  height: 12rem;
-  border-radius: 0.5rem;
-  background-color: blueviolet;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#box-2 {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 0.5rem;
-  background-color: yellowgreen;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  background-color: #09090b;
+  color: #f8fafc;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 60px; */
+  /* background-color: dodgerblue; */
+}
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  text-transform: uppercase;
+  font-size: 1.35rem;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out;
+}
+nav a:is(:hover, :focus-visible) {
+  color: #cbd5e1;
+  font-weight: 400;
+}
+
+.main-heading {
+  /* background-color: dodgerblue; */
+  font-size: 7rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 12rem;
+  width: 80%;
+  margin-inline: auto;
+  line-height: 1;
+  position: relative;
+  z-index: 5;
+}
+.main-heading::before {
+  content: "";
+  width: 100%;
+  height: 110%;
+  background-color: rgba(15, 23, 42, 0.3);
   position: absolute;
-  right: 5rem;
-  bottom: 5rem;
+  top: -1rem;
+  left: -1rem;
+  border-radius: 0.5rem;
+  z-index: 4;
+}
+
+.main-heading span:nth-child(2) {
+  align-self: center;
+}
+.main-heading span:nth-child(3) {
+  align-self: center;
+}
+
+.first-name {
+  color: #a3e635;
+  font-weight: 500;
+  position: relative;
+}
+.first-name::after {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  content: "";
+  background-color: #f8fafc;
+  bottom: 12px;
+  left: 0;
+}
+
+.img {
+  position: absolute;
+  width: 20rem;
+  height: 30rem;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border: 2px solid #cbd5e1;
+}
+
+.img-1 {
+  transform: translateX(-50%) rotate(-15deg);
+}
+.img-2 {
+  transform: translateX(-50%) rotate(15deg);
+}
+.img-3 {
+  transform: translateX(-50%) rotate(35deg);
+}
+
+.description {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

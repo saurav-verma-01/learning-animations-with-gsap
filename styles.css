@@ -1,0 +1,16 @@
+#box {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 0.5rem;
+  background-color: blueviolet;
+}
+
+#box-2 {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  background-color: yellowgreen;
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+}
